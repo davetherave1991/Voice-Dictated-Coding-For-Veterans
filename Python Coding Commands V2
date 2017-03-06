@@ -1,0 +1,96 @@
+# Voice commands for sublime_text
+# Voice commands for coding in Python
+###########################################################################################################
+
+#Functions for editing Viarables
+
+Open Replace = {ctrl+h};
+
+Clear Replace = {ctrl+h}{shift+end}{backspace}{tab}{shift+home}{backspace}{esc};
+
+Next In = {f3};
+
+#Replace (if-statement|if-expression-4|if-expression-3|if-expression-2|if-expression-1|if-number-1|if-var-1|if-number-2|if-var-2|if-number-3|if-var-3|if-number-4|if-var-4|if-number-5|if-var-5|if-number-6|if-var-6|List-string|List-num-var|List-list-1|List-float|list-name-1|List-var-1|List-var-2|List-var-3|List-var-4|List-empty-list|L S Var|index-string|Variable-1|Variable control|Var-String-1|S-String-1|Operator-1|List-var-5|Variable|List-index-1|Number-1|index-var-1|my-boolean|(Statement)|String) <_anything>= {ctrl+h} $1 {tab} $2 {ctrl+alt+enter}{ctrl+h}{shift+end}{backspace}{tab}{shift+home}{backspace}{esc};
+
+Locate (if-statement|if-expression-4|if-expression-3|if-expression-2|if-expression-1|if-number-1|if-var-1|if-number-2|if-var-2|if-number-3|if-var-3|if-number-4|if-var-4|if-number-5|if-var-5|if-number-6|if-var-6|List-string|List-num-var|List-list-1|List-float|list-name-1|List-var-1|List-var-2|List-var-3|List-var-4|List-empty-list|L S Var|index-string|Variable-1|Variable control|Var-String-1|S-String-1|Operator-1|List-var-5|Variable|List-index-1|Number-1|index-var-1|my-boolean|(Statement)|String)= {ctrl+h} $1 {tab};
+
+Switch = {ctrl+alt+enter}{ctrl+h}{shift+end}{backspace}{tab}{shift+home}{backspace}{esc};
+###########################################################################################################
+
+#Puncuation I Shouldnt have to specify- fuck you very much dragon
+
+ underscore = '_';
+
+###########################################################################################################
+# Python Control Structures,controls,variables,operators
+
+<variable> := 'Variable';
+
+<variable> = $1;
+
+<variablecontrols> := Var eq =' = '|Close Structure = ';'|String  Quotes = '"String"';
+
+<variablecontrols> = $1;
+
+<Operators> := equals = '='| add = '+'|subtract = '-'|multiply = '*'|divide = '/';
+
+<Operators> = '$1';
+
+<Boolean> := Bool-True = 'my-boolean = True'|Bool-False = 'X == not-x';
+
+<Boolean> = $1;
+
+<controlstructures> := If = 'if'{space}|Else = 'else'{space}|else if = 'elif'|While = 'while'|Statement = '(Statement)';
+
+<controlstructures> = $1;
+
+<whileloopcontrols> := Break = 'break'|Continue = 'continue';
+
+<whileloopcontrols> = $1;
+
+<List> := List = 'List-empty-list = []'|Var List = 'List-var-1 = L S Var'{enter}'list-name-1 = ["List-string",List-num-var,[List-list-1], List-float]'{enter}|List String index = 'index-string = "Hello world!"'{enter}'print(index-str[6])'{enter}|List Op State='list-name-1 = [List-var-1,List-var-2,List-var-3, List-var-4]'{enter}'List-var-1 Operator-1 List-var-2'{enter}|List not State ='list-name-1 = [List-var-1,List-var-2,List-var-3, List-var-4]'{enter}'not List-var-5 in list-name-1 #Returns True'{enter}'List-var-5 not in list-name-1 #Returns True'{enter}'not List-var-3 in list-name-1 #Returns False'{enter}'List-var-4 not in list-name-1 #Returns False'{enter};
+
+<List> = $1;
+
+<Listfunctions> := insert = 'list-name-1.insert(List-index-1, Variable)'|remove = 'list-name-1.remove(List-var-1)'|reverse = 'list-name-1.reverse()';
+
+<Listfunctions> = $1;
+
+<listMethood> := index ='list-name-1.index(List-var-1)'|count = 'list-name-1.count(List-var-1)'|min = 'min(list-name-1)'|max = 'max(list-name-1)'|count = 'list-name-1.count(List-var-1)'|Length = '(len(list-name-1))';
+
+<listMethood>  = $1;
+
+<comparisons> := E Q = '=='|not equal = '!='|Greater then = '>'|Less Then = '<'|Equal to or Greater = '>='|Equal to or less then = '<=';
+
+<comparisons> = $1;
+
+<structurecontrols>:= C Parent = ':'{enter}{tab}|X Parent = {backspace};
+
+<structurecontrols> = $1;
+
+<Methood> := index ='list-name-1.index(List-var-1)'|count = 'list-name-1.count(List-var-1)'|min = 'min(list-name-1)'|max = 'max(list-name-1)'|count = 'list-name-1.count(List-var-1)'|Length = '(len(list-name-1))';
+
+<Methood>  = $1;
+
+<functions> := Print = 'print()'|Input = 'input("Enter a number:")';
+
+<functions> = $1;
+
+###########################################################################################################
+#PLEASE ADD PYTHON BOOLEAN LOGIC & PYTHON OPERATOR PRECEDENCE
+###########################################################################################################
+
+###########################################################################################################
+
+#Functions For Dictation
+
+dictate <_anything>= $1;
+
+<number> := 0..99; 
+In <number> =$1;
+
+Clear S = {ctrl+left}{backspace};
+Fly (Left|Right) = {ctrl+$1};
+Line Beginning = {home};
+Line End = {end};
+###########################################################################################################
