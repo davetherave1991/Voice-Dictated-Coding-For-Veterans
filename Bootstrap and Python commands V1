@@ -1,0 +1,112 @@
+# Voice commands for notepad++
+
+#Formatting Variables
+<directionupordown> := Up|Down;
+<number> := 1..99;
+
+#Formatting and Control Commands
+Slide Project = {alt+tab};
+Save = {Ctrl+s};
+#Select <number> lines <directionupordown> =  ;#THE FUUUCCCCKKKKKK!!!
+
+#Emmet Commands
+Expand = {del};
+E pr = >;
+pr of 1..10 = *$1; 
+
+#HTML 5 commands
+Html 5 =  !;
+htpd <_anything> = p{$1};
+htlb = <br />{enter};
+
+
+ht class <_anything> = .$1;
+
+#Bootstrap set up
+set up BS ='<!doctype html>'{enter}'<html lang="en">'{enter}'<head>'{enter}{tab}'<meta charset="UTF-8">'{enter}'<meta http-equiv="X-UA-Compatible" content="IE=edge">'{enter}'<meta name="viewport" content="width = device-width, initital-scale = 1" >'{enter}'<title>Bootstrap Turtorial</title>'{enter}'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">'{enter}{backspace}'</head>'{enter}'<body>'{enter}{tab}'<div class="container">'{enter}{enter}'</div>'{enter}{enter}'<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>'{enter}'<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>'{enter}{backspace}'</body>'{enter}'</html>'{up}{up}{up}{up}{up}{up};
+link BS CSS ='<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">';
+
+#Bootstrap page formatting
+BS container='<div class="container">'{enter}{enter}'</div>';
+BS row='<div class="row">'{enter}{enter}'</div>'{up};
+BS page-header = {tab}'<div class="page-header">'{enter}{tab}'<h1>Bootstrap Header</h1>'{enter}'</div>'{left}{left}{left}{left}{left}{left}{backspace};
+BS jumbotron = '<div class="jumbotron">'{enter}{enter}'</div>'{up}{up};
+
+#Bootstrap grid's
+BS C G = '<div class="">'{enter}{enter}'</div>'{up}{up}{right}{right}{right}{right}{right}{right};
+BS XS 1..12=col-xs-$1{space};
+BS SM 1..12=col-sm-$1{space} ;
+BS MD 1..12=col-md-$1{space};
+BS LG 1..12=col-lg-$1{space};
+BS clearfix = '<div class="clearfix  visible-lg"></div>';
+
+#Bootstrap collapse content
+BS C setup ='<div class="row">'{enter}'<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">'{enter}'<h4><a href="#col1Content" data-toggle="collapse">Column1</a></h4>'{enter}'<div id="col1Content" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, facere.</div>'{enter}'</div>'{enter}{enter}'<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">'{enter}'<h4><a href="#randcontent" data-toggle="collapse">randcontent</a></h4>'{enter}'<div id="randcontent" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, facere.</div>'{enter}'</div>'{enter}{enter}'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">'{enter}'<h4><a href="#col3Content" data-toggle="collapse">Column3</a></h4>'{enter}'<div id="col3Content" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, facere.</div>'{enter}'</div>'{enter}'</div>';
+
+#Bootstrap hide on screen sizes
+
+BS hide setup ='<div class="well hidden-sm hidden-md hidden-lg">'{enter}{tab}'<p>Screen &lt; 768px and &lt; 992px</p>'{enter}'</div>'{enter}'<div class="well hidden-lg">'{enter}{tab}'<p>Screen &lt; 992px and &lt; 1200px</p>'{enter}'</div>'{enter}'<div class="well">'{enter}{tab} this had set up'<p>Screen &gt; 1200px</p>'{enter}'</div>';
+
+#Bootstrap table setup
+
+BS TA setup ='<div class="row">'{enter}'<div class="col-md-6 col-md-offset-6">'{enter}'<table class="table-bordered table-striped table-hover">'{enter}'<thead>'{enter}'<tr>'{enter}'<td colspan="4">Best Baseball Players</td>'{enter}'</tr>'{enter}'</thead>'{enter}'<tbody>'{enter}'<tr>'{enter}'<!-- You can adjust the width of table columns as well -->'{enter}'<th class="col-md-2"></td>'{enter}'<!-- Use text alignment like text-center or text-right -->'{enter}'<th class="text-center">Average</td>'{enter}'<th class="text-center">RBIs</td>'{enter}'<th class="text-center">Homeruns</td>'{enter}'</tr>'{enter}'<tr>'{enter}'<td><a href="#">Hank Aaron</a></td>'{enter}'<td>.305</td>'{enter}'<td>2297</td>'{enter}'<td>755</td>'{enter}'</tr>'{enter}'<tr>'{enter}'<td><a href="#">Babe Ruth</a></td>'{enter}'<td>.342</td>'{enter}'<td>2214</td>'{enter}'<td>714</td>'{enter}'</tr>'{enter}'<tr>'{enter}'<td><a href="#">Barry Bonds</a></td>'{enter}'<td>.298</td>'{enter}'<td>1996</td>'{enter}'<td>762</td>'{enter}'</tr>'{enter}'</tbody>'{enter}'</table>'{enter}'</div>';
+
+#Bootstrap carousel
+
+BS car setup= '<div id="myCarousel" class="carousel slide" data-ride="carousel">'{enter}'<!-- Indicators -->'{enter}'<ol class="carousel-indicators">'{enter}'<li data-target="#myCarousel" data-slide-to="0" class="active"></li>'{enter}'<li data-target="#myCarousel" data-slide-to="1"></li>'{enter}'<li data-target="#myCarousel" data-slide-to="2"></li>'{enter}'<li data-target="#myCarousel" data-slide-to="3"></li>'{enter}'</ol>'{enter}{enter}{enter}'<!-- Wrapper for slides -->'{enter}'<div class="carousel-inner" role="listbox">'{enter}'<div class="item active">'{enter}'<img src="Pics/img_chania.jpg" alt="Chania">'{enter}'<div class="carousel-caption">'{enter}'<h3>Chania</h3>'{enter}'<p>The atmosphere in Chania has a touch of Florence and Venice.</p>'{enter}'</div>'{enter}'</div>'{enter}{enter}{enter}'<div class="item">'{enter}'<img src="Pics/img_chania2.jpg" alt="Chania">'{enter}'<div class="carousel-caption">'{enter}'<h3>Chania</h3>'{enter}'<p>The atmosphere in Chania has a touch of Florence and Venice.</p>'{enter}'</div>'{enter}'</div>'{enter}{enter}{enter}'<div class="item">'{enter}'<img src="Pics/img_flower.jpg" alt="Flower">'{enter}'<div class="carousel-caption">'{enter}'<h3>Flowers</h3>'{enter}'<p>Beatiful flowers in Kolymbari, Crete.</p>'{enter}'</div>'{enter}'</div>'{enter}{enter}{enter}'<div class="item">'{enter}'<img src="Pics/img_flower2.jpg" alt="Flower">'{enter}'<div class="carousel-caption">'{enter}'<h3>Flowers</h3>'{enter}'<p>Beatiful flowers in Kolymbari, Crete.</p>'{enter}'</div>'{enter}'</div>'{enter}'</div>'{enter}{enter}{enter}'<!-- Left and right controls -->'{enter}'<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">'{enter}'<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'{enter}'<span class="sr-only">Previous</span>'{enter}'</a>'{enter}'<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">'{enter}'<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>'{enter}'<span class="sr-only">Next</span>'{enter}'</a>'{enter}'</div>';
+
+# Voice commands for sublime_text "Python"
+
+#Functions for editing Viarables
+Replace (if-statement|if-expression-4|if-expression-3|if-expression-2|if-expression-1|if-num-1 = if-var-1|if-num-2 = if-var-2|if-num-3 = if-var-3|if-num-4 = if-var-4|if-num-5 = if-var-5|if-num-6 = if-var-6) <_anything>= {ctrl+h} $1 {tab} $2;
+
+
+#Python Print
+Py print string = '>>>print('Hello world!')';
+
+#Python Operators
+Py create add = '>>> X + Y';
+Py create sub = '>>> X - Y';
+Py create mul  = '>>> X * Y';
+Py create div = '>>> X / Y';
+
+#Python Con
+Py STR OP ='>>> print ("String-1"+","+"String-2")';
+
+#Python Variables
+Py Var N = '>>> x = 100';
+Py Var S = '>>> x = "string"';
+Py Var named = '>>> named_variable_x = var';
+
+#Python input
+Py Var input = '>>> x = input("Enter a number:"){enter}>>>print(x)';
+
+#Python Booleans
+Py B T = '>>> my_boolean = True';
+Py B false comp = '>>> X == not-x';
+
+#Python Comparisons
+Py not EQ = 'X != Y';
+Py GR = 'X > Y';
+Py LT ='X < Y';
+Py EQ GR = 'X >= Y';
+Py EQ LT = 'X <= Y';
+
+# Python Control Structures
+Py if state = 'if if-statement:'{enter}{tab}'if-expression-1'{enter}{shift+home}{backspace}{enter};
+Py Var if state = 'if-num-1 = if-var-1'{enter}'if-num-2 = if-var-2'{enter}'if if-var-1 > if-var-2:'{enter}{tab}'if-expression-1'{enter}'if Var-1 < if-var-2:'{enter}{tab}'if-expression-2'{enter}{shift+home}{backspace}{enter};
+Py Var else state ='var = if-var-1'{enter}'if if-var-1 > if-var-2:'{enter}{tab}'if-expression-1'{enter}{backspace}'else:'{enter}{tab}'if-expression-2'{enter}{shift+home}{backspace}{enter};
+Py me Var else state = 'if-num-1 = if-var-1'{enter}'if-num-2 = if-var-2'{enter}'if if-num-1 == if-num-2:'{enter}{tab}'if-expression-1'{enter}{backspace}'else:'{enter}{tab}'if if-num-1 == if-num-2:'{enter}{tab}'if-expression-2'{enter}{backspace}'else:'{enter}{tab}'if if-num-1 == if-num-2:'{enter}{tab}'if-expression-3'{enter}{backspace}'else:'{enter}{tab}'if-expression-4'{enter}{shift+home}{backspace}{enter};
+Py EL I state = 'if-num-1 = if-var-1'{enter}'if-num-2 = if-var-2'{enter}'if-num-3 = if-var-3'{enter}'if-num-4 = if-var-4'{enter}'if-num-5 = if-var-5'{enter}'if-num-6 = if-var-6'{enter}'if if-num-1 == if-num-2:'{enter}{tab}'if-expression-1'{enter}{backspace}'elif if-num-3 == if-num-4:'{enter}{tab}'if-expression-2'{enter}{backspace}'elif if-num-5 == if-num-6:'{enter}{tab}'if-expression-3'{enter}{backspace}'else:'{enter}{tab}'if-expression-4'{enter};
+
+#Python Boolean Logic
+Py display B logic ='>>> 1 == 1 and 2 == 2'{enter}'True'{enter}'>>> 1 == 1 and 2 == 3'{enter}'False'{enter}'>>> 1 != 1 and 2 == 2'{enter}'False'{enter}'>>> 2 < 1 and 3 >  6'{enter}'False'{enter}'>>> 1 == 1 or 2 == 2'{enter}'True'{enter}'>>> 1 == 1 or 2 == 3'{enter}'True'{enter}'>>> 1 != 1 or 2 == 2'{enter}'True'{enter}'>>> 2 < 1 or 3 >  6'{enter}'False'{enter}'>>> not 1 == 1'{enter}'False'{enter}'>>> not 1 > 7'{enter}'True';
+
+#Python Operator Precedence
+
+Py display operator precedence = '** exponentiation (raise to he power)'{enter}'`+- (Complement, unary and minus)'{enter}'*/%// Multiply,divide,mudulo and floor division'{enter}'+- Addition and subtraction'{enter}'Right and left bitwise shift'{enter}'& bitwise "AND"'{enter}'^| Bitwise exclusive "OR" and regular "OR"'{enter}'<= < > >= Comparison operators'{enter}'< > == != Equality operators'{enter}'=%=/=//+=*=**== Assignment operators'{enter}'is is not Identy operators'{enter}'in not in Membership operators'{enter}'not or and Logical operators';
+
+#Python while Loop
+Py while loop = 'while_if-var-1 = while_variable_1'{enter}'while_if-var-2 = while_variable_2'{enter}'while while_if-var-1 <= while_if-var-2:'{enter}{tab}'While_if-expression'{enter}'#while_if-var-1 = while_if-var-1 + 1';
+Py while loop with break ='while_if-var-1 = while_variable_1'{enter}'while_if-var-2 = while_variable_2'{enter}'while while_if-var-1 <= while_if-var-2:'{enter}{tab}'While_if-expression'{enter}'#while_if-var-1 = while_if-var-1 + 1'{enter}'##while_if-var-1 >= while_if-var-2:'{enter}{tab}'##while_if-expression_2'{enter}'##break'{enter};
+Py while loop with B and continue ='while_if-var-1 = while_variable_1'{enter}'while_if-var-2 = while_variable_2'{enter}'while True:'{enter}{tab}'while_if-var-1 = while_if-var-1'{enter}'if while_if-var-1 == while_if-var-2:'{enter}{tab}'While_if-expression_1'{enter}'continue'{enter}{backspace}'if while_if-var-1 == while_if-var-2:'{enter}{tab}'While_if-expression_2'{enter}'break'{enter}{enter}{backspace}'print("String_end")';
